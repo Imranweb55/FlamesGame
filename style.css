@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh; /* make sure gradient fills the viewport */
+  background: linear-gradient(to bottom, #f8d7da, #ff0000);
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* ensures smooth full-page gradient */
+  text-align: center;
+  color: #000;
+}
+
+/* Title */
+h2 {
+  margin-top: 20px;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+}
+/* Description text */
+p {
+  max-width: 700px;
+  margin: 10px auto;
+  font-size: 16px;
+  color: #222;
+  line-height: 1.5;
+}
+/* Input fields */
+#n1,
+#n2 {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+  width: 200px;
+  margin: 40px 30px 20px;
+  text-align: center;
+}
+/* Heart container */
+.heart {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  width: 250px;
+  height: 220px;
+}
+.heart img:first-child {
+  width: 100%;
+  height: auto;
+}
+/* Inner black heart */
+.heart img:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  cursor: pointer;
+}
+
+#btn {
+  margin-top: 5px;
+  padding: 12px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 65, 108, 0.6), 0 0 30px rgba(255, 75, 43, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+#btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 65, 108, 0.9), 0 0 40px rgba(255, 75, 43, 0.7),
+    0 0 60px rgba(255, 0, 0, 0.6);
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+/* Output result */
+#out {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 0 5px #ff4b2b, 0 0 10px #ff416c, 0 0 20px #ff0000;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 5px #ff4b2b, 0 0 10px #ff416c, 0 0 20px #ff0000;
+  }
+  to {
+    text-shadow: 0 0 10px #ff416c, 0 0 20px #ff4b2b, 0 0 40px #ff0000,
+      0 0 60px #ff1a1a;
+  }
+}
